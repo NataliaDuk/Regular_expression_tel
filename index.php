@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -13,17 +14,24 @@
     <form action="" method="post">
         <textarea rows="20" cols="50" name="name"></textarea>
         <input type="submit" value="OK">
-
-    </form>
-    <?php
+        <?php
     $str = $_POST["name"];
   
-    if (preg_match('/^(80212|\+375(\-?\(?)212(\-?\)?))(2|3|6|9)\d{5}/', $str)) {
+    
+    //  if (preg_match('/^((80212)?)(2|3|6|9)(\d{5})$|^\+375(\(?)212(\)?)(-?)(2|3|6|9)\d(-?)\d{2}(-?)\d{2}$/', $str)) {
+    //     echo 'Мы Вам перезвоним';
+    // } else {
+    //     echo 'нет такого номера';
+    // }
+ if (preg_match('/^(([80,+375]?(212)?))?(2|3|6|9)\d{5}$|^\+375\(212\)(2|3|6|9)\d{5}$|^\+375\(212\)-?(2|3|6|9)(\d{3}|\d-\d{2}-\d{2})$/', $str)) {
         echo 'Мы Вам перезвоним';
     } else {
         echo 'нет такого номера';
     }
+
     ?>
+    </form>
+   
 </body>
 
 </html>
