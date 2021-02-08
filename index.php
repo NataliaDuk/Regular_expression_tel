@@ -11,27 +11,39 @@
 </head>
 
 <body>
+<h1>Добрый день!</h1>
+<p>В Витебске и области действует 6-значная нумерация, начиная с цифр 2,3,6 и 9.<p> 
+    <h2>Допустимые форматы ввода номеров:</h2>
+    <ul>
+    <li>80212259955</li>
+    <li>+375212359955</li>
+    <li>+375(212)659955</li>
+    <li>+375(212)65-99-55</li>
+    <li>+375-(212)-95-99-55</li>
+    <li>959955</li>
+    </ul>
+<h2> Оставьте Ваш номер телефона</h2>
+<div class="form">
     <form action="" method="post">
-        <textarea rows="20" cols="50" name="name"></textarea>
-        <input type="submit" value="OK">
+        <textarea rows="5" cols="30" name="name"></textarea><br>
+        <input type="submit" value="OK"><br><br>
         <?php
     $str = $_POST["name"];
-  
-    
-    //  if (preg_match('/^((80212)?)(2|3|6|9)(\d{5})$|^\+375(\(?)212(\)?)(-?)(2|3|6|9)\d(-?)\d{2}(-?)\d{2}$/', $str)) {
-    //     echo 'Мы Вам перезвоним';
-    // } else {
-    //     echo 'нет такого номера';
-    // }
- if (preg_match('/^(([80,+375]?(212)?))?(2|3|6|9)\d{5}$|^\+375\(212\)(2|3|6|9)\d{5}$|^\+375\(212\)-?(2|3|6|9)(\d{3}|\d-\d{2}-\d{2})$/', $str)) {
-        echo 'Мы Вам перезвоним';
+ if (preg_match('/^((80|\+375)212)?(2|3|6|9)\d{5}$|^\+375\(212\)(2|3|6|9)(\d{5}|\d-\d{2}-\d{2})$|^\+375-\(212\)-(2|3|6|9)(\d{3}|\d-\d{2}-\d{2})$/', $str)) {
+        echo 'Ожидайте звонка';
     } else {
-        echo 'нет такого номера';
+        echo 'Не правильно набран номер';
     }
-
     ?>
     </form>
-   
+    </div>
+    
+    <div class=gallery>
+    <img src="images7.jpg" width="450px" height="300px" alt="">
+    <img src="images2.jpg" awidth="450px" height="300px" lt="">
+    <img src="images3.jpg" width="450px" height="300px" alt="">
+    <img src="images8.jpg" width="450px" height="300px" alt="">
+    </div>
 </body>
 
 </html>

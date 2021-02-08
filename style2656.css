@@ -1,21 +1,37 @@
 body {
-    background-image: url();
+    background-image: url(5575ada078cf71b663b6317b63dafcdd.jpg);
     background-size: 100%;    
 }
 h1 {
+    margin-top: 30px;
     text-align: center;
      text-shadow: 3px 1px 3px black;
      font-family:Arial, Helvetica, sans-serif;
-     font-size: 60pt;
-     color:brown;
+     font-size: 40pt;
+     color:blue;
      
  }
+ h2, p {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    color: black;
+ }
 
-div {
-   
+ div {
+    border: 100px;
     text-align: center;
     font: bold 16pt Arial, Helvetica, sans-serif;
 
+}
+
+ul {
+    margin-left: 43%;
+    font: 16pt Arial, Helvetica, sans-serif;
+}
+
+.gallery {
+    margin-top: 10px;
 }
 
 
